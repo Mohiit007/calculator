@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my_website</title>
-    <link rel="stylesheet" href="style.css">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div id="calculator"> 
-        <input type="text" name="" id="display" readonly>
-        <div id="keys">
-            <button onclick="appendtodisplay('+')" class="opt_btn">+</button>
-            <button onclick="appendtodisplay('7')">7</button>
-            <button onclick="appendtodisplay('8')">8</button>
-            <button onclick="appendtodisplay('9')">9</button>
-            <button onclick="appendtodisplay('-')" class="opt_btn">-</button>
-            <button onclick="appendtodisplay('4')">4</button>
-            <button onclick="appendtodisplay('5')">5</button>
-            <button onclick="appendtodisplay('6')">6</button>
-            <button onclick="appendtodisplay('*')" class="opt_btn">*</button>
-            <button onclick="appendtodisplay('1')">1</button>
-            <button onclick="appendtodisplay('2')">2</button>
-            <button onclick="appendtodisplay('3')">3</button>
-            <button onclick="appendtodisplay('/')" class="opt_btn">/</button>
-            <button onclick="appendtodisplay('0')">0</button>
-            <button onclick="appendtodisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="cleardisplay()" id="clear_btn" class="opt_btn">C</button>
-        </div>
+  <header>
+    <h1 style="color: white;">calculator</h1>
+  </header>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button value="1" onclick="appendval(this.value)">1</button>
+      <button value="2" onclick="appendval(this.value)">2</button>
+      <button value="3" onclick="appendval(this.value)">3</button>
+
+      <button value="+" onclick="appendval(this.value)">+</button>
+
+      <button value="4" onclick="appendval(this.value)">4</button>
+      <button value="5" onclick="appendval(this.value)">5</button>
+      <button value="6" onclick="appendval(this.value)">6</button>
+
+      <button value="-" onclick="appendval(this.value)">-</button>
+
+      <button value="7" onclick="appendval(this.value)">7</button>
+      <button value="8" onclick="appendval(this.value)">8</button>
+      <button value="9" onclick="appendval(this.value)">9</button>
+
+      <button value="/" onclick="appendval(this.value)">/</button>
+
+      <button value="0" onclick="appendval(this.value)">0</button>
+
+
+
+      <button value="*" onclick="appendval(this.value)">*</button>
+      <button onclick="clear_val()">C</button>
+      <button onclick="backspace()">⌫</button>
+      <button onclick="calculate()" id="equals">=</button>
     </div>
 
-
-    <script src="index.js" ></script>
-
+  </div>
+  <script src="app.js"></script>
 </body>
-</html> 
+
+</html>
